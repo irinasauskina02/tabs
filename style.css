@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    background-color:rgb(202, 202, 202);
+}
+.container {
+    display: flex;
+    box-sizing: border-box;
+    color: #fff;
+}
+.wrapper.wp-1 {
+    width: 20%;
+}
+.wrapper.wp-2 {
+    width: 80%;
+}
+.menu  {
+   padding: 1em;
+}
+.menu div {
+    padding: 7px;
+    margin-bottom: 5px;
+    background-color: rgba(95, 174, 226, 0.719);
+    position: relative;
+    border-radius: 4px;
+}
+
+.menu div span {padding-left: 7%; }
+.menu div span::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color:#fff;
+    left: 3%;
+    top: 40%;
+    border-radius: 50%;
+    transition: left 1s ease 0s;
+}
+.menu div.active {
+    color: rgb(240 245 206);
+    font-weight: 700;
+    font-size: 22px;
+    
+}
+.menu div.active span {padding-left: 4%;}
+.menu div.active span::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: rgb(240 245 206);
+    left: 0;
+    top: 0;
+    border-radius: 0;
+}
+ul.item {margin: 0; list-style: none;}
+ul.item li {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+}
+ul.item li.active {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+}
+

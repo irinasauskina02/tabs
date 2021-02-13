@@ -60,12 +60,24 @@ body {
 ul.item {margin: 0; list-style: none;}
 ul.item li {
     opacity: 0;
-    visibility: hidden;
+    display: none;
     height: 0;
+    animation: opacity 2s ease-in-out;
+   
 }
 ul.item li.active {
     opacity: 1;
-    visibility: visible;
+    display: block;
+    
     height: 100%;
 }
+@keyframes opacity {
+    from{
+        opacity: 0;
+    } 
+    to {
+        opacity: 1;
+    }
+}
+.menu-item {cursor: pointer;}
 
